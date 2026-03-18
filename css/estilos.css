@@ -25,24 +25,34 @@ text-align:center;
 
 nav{
 margin-top:10px;
+display: flex;
+justify-content: center;
+gap: 15px;
+flex-wrap: wrap;
 }
 
 nav a{
 color:white;
-margin:0 10px;
 text-decoration:none;
 font-weight:bold;
+padding: 8px 16px;
+border-radius: 20px;
+transition: background 0.3s;
+cursor: pointer;
+}
+
+nav a:hover, nav a.activo {
+background: rgba(255, 255, 255, 0.2);
+}
+
+.logo-header {
+    max-width: 250px;
+    margin-bottom: 10px;
 }
 
 .hero{
 padding:20px;
 text-align:center;
-}
-
-.hero img{
-width:100%;
-max-width:500px;
-border-radius:10px;
 }
 
 section{
@@ -76,6 +86,11 @@ border-radius:6px;
 margin-top:10px;
 }
 
+.seccion-contenido {
+display: none;
+animation: fadeIn 0.5s;
+}
+
 footer{
 background:#111;
 color:white;
@@ -88,6 +103,47 @@ footer a{
 color:#9be564;
 text-decoration:none;
 }
+
+/*animacion*/
+@keyframes fadeIn {
+from { opacity: 0; transform: translateY(10px); }
+to { opacity: 1; transform: translateY(0); }
+}
+
+.spot-publicitario {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.slide {
+  display: none;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
 
 /* TABLET */
 
